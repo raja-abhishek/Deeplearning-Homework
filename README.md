@@ -25,3 +25,17 @@ Finally, used the testing data to evaluate each model and compare the performanc
 - Which model has a lower loss?
 - Which model tracks the actual values better over time?
 - Which window size works best for the model?
+
+###### Using Closing Price
+
+| Sample/Window Size | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10|
+|:------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|-:|
+|Training Loss|0.1143|0.0858|0.0594|0.0509|0.0466|0.0463|0.0395|0.0398|0.0335|0.0331|   
+|Test Loss    |0.0982|0.0683|0.0482|0.0329|0.0321|0.0314|0.0267|0.0279|0.0263|0.0243|
+
+###### FNG
+
+| Sample/Window Size | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10|
+|:------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|-:|
+|Training Loss|||||||||||  
+|Test Loss    |||||||||||
