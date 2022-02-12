@@ -22,20 +22,46 @@ In this assignment, deep learning recurrent neural networks has been used to mod
 
 Finally, used the testing data to evaluate each model and compare the performance.
 
-- Which model has a lower loss?
-- Which model tracks the actual values better over time?
-- Which window size works best for the model?
+**Q1:** Which model has a lower loss?
+
+**A:** Model using closing price has lower loss compared to model with FNG 
+
+###### Using Closing Price
+
+| Sample|Window Size 10|
+|:------------|-:|
+|Training Loss|0.0331|   
+|Test Loss    |0.0243|
+
+###### FNG
+0.0243
+| Sample| Window Size 10|
+|:------------|-:|
+|Training Loss|0.0566|  
+|Test Loss    |0.0488|
+
+**Q2:** Which model tracks the actual values better over time?
+
+**A:** Model using closing price tracks values better over time as shown in the charts below
+![Window10_cp](Window10_cp.png)
+![Window10_fng](Window10_fng.png)
+
+ **Q3:** Which window size works best for the model?
+
+**A:** Window size 9 works best for both the approaches due to least difference in loss rate between train and test sample which shows a better fit. 
 
 ###### Using Closing Price
 
 | Sample/Window Size | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10|
 |:------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|-:|
-|Training Loss|0.1143|0.0858|0.0594|0.0509|0.0466|0.0463|0.0395|0.0398|0.0335|0.0331|   
-|Test Loss    |0.0982|0.0683|0.0482|0.0329|0.0321|0.0314|0.0267|0.0279|0.0263|0.0243|
+|Training Loss|0.1451|0.1389|0.1199|0.0939|0.0955|0.0506|0.0480|0.0399|0.0250|0.0331|   
+|Test Loss    |0.1299|0.1248|0.1087|0.0666|0.0734|0.0366|0.0305|0.0320|0.0174|0.0243|
 
 ###### FNG
-
+0.0243
 | Sample/Window Size | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 |10|
 |:------------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|-:|
-|Training Loss|||||||||||  
-|Test Loss    |||||||||||
+|Training Loss|0.1448|0.1385|0.1202|0.0971|0.0922|0.0620|0.0616|0.0577|0.0541|0.0566|  
+|Test Loss    |0.1296|0.1243|0.1091|0.0703|0.0701|0.0478|0.0446|0.0506|0.0484|0.0488|
+
+
