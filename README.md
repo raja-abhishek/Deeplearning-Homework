@@ -15,8 +15,18 @@ In this assignment, deep learning recurrent neural networks has been used to mod
 - Evaluate the performance of each model
 
 #### Prepare the data for training and testing
+- Converted provided csv file into DataFrame
+- Created the window of time for the data in each dataset.
+- For the Fear and Greed model, used the FNG values to predict the closing price
+- For the closing price model, used previous closing prices to predict the closing price
+- Used 70% of the data for training and 30% of the data for testing
+- Applied a MinMaxScaler to the X and y values to scale the data for the model.
+- Finally, reshaped the X_train and X_test values to fit the model's requirement of samples, time steps, and features
 
 #### Build and train custom LSTM RNNs
+
+Created same custom LSTM RNN architecture for both the models. In one used FNG value to fit the data and in other used only closing prices.
+Used the same parameters and training steps for each model which is necessary to compare each model accurately.
 
 #### Evaluate the performance of each model
 
@@ -42,7 +52,8 @@ Finally, used the testing data to evaluate each model and compare the performanc
 
 **Q2:** Which model tracks the actual values better over time?
 
-**A:** Model(window size 10) using closing price tracks values better over time as shown in the charts below
+**A:** Model(window size 10) using closing price tracks ups and downs more closely over time compared to FNG model as shown in the charts below
+
 ![Window10_cp](Window10_cp.png)
 ![Window10_fng](Window10_fng.png)
 
